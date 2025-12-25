@@ -1,13 +1,13 @@
-const set = (obj, key, value1) => {
+const set = (obj, key, value) => {
   if (!key) return false
 
   if (Object.hasOwn(obj, key)) return false
 
   Object.defineProperty(obj, key, {
-    value: value1,
+    value,
     writable: false,
     configurable: true,
-    enumerable: false,
+    enumerable: true,
   })
 }
 
